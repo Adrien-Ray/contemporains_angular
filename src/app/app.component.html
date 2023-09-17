@@ -1,6 +1,19 @@
-<mat-toolbar color="primary">
-  <span>{{title}}</span>
-  <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+<mat-toolbar color="primary" class="header">
+  <a routerLink="">{{title}}</a>
+  <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon" [matMenuTriggerFor]="menu">
     <mat-icon>menu</mat-icon>
   </button>
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item routerLink="">accueil</button>
+    <button mat-menu-item routerLink="/recherche/date">recherche par date</button>
+    <button mat-menu-item routerLink="/recherche/nom">recherche par nom</button>
+  </mat-menu>
+</mat-toolbar>
+
+<div class="content">
+  <router-outlet></router-outlet>
+</div>
+
+<mat-toolbar color="primary" class="footer">
+  <span>{{title}}</span>
 </mat-toolbar>

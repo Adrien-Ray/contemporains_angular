@@ -1,9 +1,40 @@
 /* You can add global styles to this file, and also import other style files */
 
 @import '@angular/material/prebuilt-themes/purple-green.css';
+
+:root {
+    --mdc-filled-text-field-focus-label-text-color : rgba(255, 255, 255, 0.8);
+}
+
+*{
+    box-sizing: border-box;
+}
 html, body { height: 100%; }
 body {
+    color: white;
     margin: 0;
     font-family: Roboto, "Helvetica Neue", sans-serif;
     background-color: var(--mat-stepper-container-color);
+    app-root{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        min-height: 100vh;
+    }
+    .content {
+        flex: 1;
+        padding: 2rem;
+        width: 100%;
+        max-width: 1200px;
+        margin: auto;
+        router-outlet {
+            border: 2px dashed red;
+            display: none;
+        }
+    }
+    a {
+        color: var(--mat-toolbar-container-text-color);
+    }
 }
+
+
