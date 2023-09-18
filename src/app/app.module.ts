@@ -15,12 +15,14 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SearchByDateComponent } from './components/search-by-date/search-by-date.component';
 import { SearchByNameComponent } from './components/search-by-name/search-by-name.component';
+import { CaractersCardsComponent } from './components/caracters-cards/caracters-cards.component';
 
 @NgModule({
     declarations: [
         AppComponent,
         SearchByDateComponent,
         SearchByNameComponent,
+        CaractersCardsComponent,
     ],
     imports: [
         RouterModule,

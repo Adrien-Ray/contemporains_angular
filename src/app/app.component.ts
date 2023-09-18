@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { environment } from "./environments/environment";
 
 @Component({
@@ -7,7 +7,10 @@ import { environment } from "./environments/environment";
     styleUrls: ['./app.component.scss'],
     /* standalone: true, */
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
     title = 'contemporains';
     testEndPoint = environment.apiEndPoint;
+    ngOnInit() {
+        
+    }
 }
