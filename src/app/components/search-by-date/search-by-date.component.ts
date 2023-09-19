@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Caracter } from "../../models/caracter.model";
+import { CaractersService } from "../../services/caracters.service";
+
 
 @Component({
     selector: 'app-search-by-date',
@@ -8,21 +10,8 @@ import { Caracter } from "../../models/caracter.model";
 })
 export class SearchByDateComponent implements OnInit {
     caracters!: Caracter[];
-
-    ngOnInit() {
-        this.caracters = [
-            {
-                id: 1,
-                name: 'albert',
-            },
-            {
-                id: 2,
-                name: 'Rodney',
-            },
-            {
-                id: 3,
-                name: 'Marvin',
-            },
-        ];
+    constructor(private caractersService: CaractersService) { }
+    ngOnInit(): void {
+        this.caracters = this.caractersService.getAllCaracters();
     }
 }

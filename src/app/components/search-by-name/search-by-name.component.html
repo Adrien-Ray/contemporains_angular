@@ -2,3 +2,6 @@
     <mat-label>entrer votre recherche</mat-label>
     <input matInput placeholder="Ex. Albert">
 </mat-form-field>
+<app-caracters-cards *ngFor="let caracter of caracters" [caracter]="caracter"></app-caracters-cards>
+<hr>
+<app-caracters-cards [caracter]="caracter"></app-caracters-cards>
