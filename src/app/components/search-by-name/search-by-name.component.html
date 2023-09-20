@@ -1,7 +1,9 @@
 <mat-form-field class="example-full-width">
-    <mat-label>entrer votre recherche</mat-label>
-    <input matInput placeholder="Ex. Albert">
+    <mat-label>entrer un nom</mat-label>
+    <input matInput placeholder="Ex. Albert" [(ngModel)]="inputValue" (ngModelChange)="onValueChange($event)">
 </mat-form-field>
-<app-caracters-cards *ngFor="let caracter of caracters" [caracter]="caracter"></app-caracters-cards>
-<hr>
-<app-caracters-cards [caracter]="caracter"></app-caracters-cards>
+
+<div class="appCaractersCardsList">
+    <app-caracters-cards *ngFor="let caracter of caracters$ | async" [caracter]="caracter"></app-caracters-cards>
+</div>
+<!-- <app-caracters-cards [caracter]="caracter"></app-caracters-cards> -->

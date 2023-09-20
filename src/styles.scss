@@ -35,6 +35,17 @@ body {
     a {
         color: var(--mat-toolbar-container-text-color);
     }
+    .appCaractersCardsList {
+        display: flex;
+        flex-wrap: wrap;
+        border: 1px solid grey;
+        padding: 5px;
+        app-caracters-cards{
+            border: 1px solid grey;
+            display: block;
+            margin: 5px;
+        }
+    }
 }
 
 
