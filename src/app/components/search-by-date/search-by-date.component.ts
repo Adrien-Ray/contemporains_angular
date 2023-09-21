@@ -13,15 +13,13 @@ export class SearchByDateComponent implements OnInit, OnDestroy {
     inputValue!: number;
     caracters$!: Observable<Caracter[]>;
     onValueChange(newValue: number) {
-        console.log('Nouvelle valeur : ', newValue);
-        // Vous pouvez effectuer d'autres actions ici avec la nouvelle valeur
         this.caracters$ = this.caractersService.getByDateCaracters(newValue);
     }
     caracters!: Caracter[];
     constructor(private caractersService: CaractersService) { }
     ngOnInit(): void {
         // this.caracters = this.caractersService.getAllCaracters();
-        this.caracters$ = this.caractersService.getAllCaracters();
+        // this.caracters$ = this.caractersService.getAllCaracters();
     }
-    ngOnDestroy(): void {}
+    ngOnDestroy(): void { }
 }

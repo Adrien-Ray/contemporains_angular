@@ -27,6 +27,7 @@ export class CaractersService {
     }
 
     getByDateCaracters(date: number): Observable<Caracter[]> {
+        console.log('in service caracters.getByDateCaracters');
         // eslint-disable-next-line @typescript-eslint/no-explicit-any
         return this.http.get<any>(`${environment.apiEndPoint}/characters?filters[$and][0][year_born][$lte]=${date}&filters[$and][1][year_die][$gte]=${date}`, this.httpOptions)
             .pipe(
@@ -35,6 +36,8 @@ export class CaractersService {
     }
 
     getByNameCaracters(search: string): Observable<Caracter[]> {
+        console.log('in service caracters.getByNameCaracters');
+        
         // eslint-disable-next-line @typescript-eslint/no-explicit-any
         return this.http.get<any>(`${environment.apiEndPoint}/characters?filters[name][$contains]=${search}`, this.httpOptions)
             .pipe(

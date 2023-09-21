@@ -23,8 +23,8 @@ export class SearchByNameComponent implements OnInit, OnDestroy{
     constructor(private caractersService: CaractersService) { }
     ngOnInit(): void {
         // this.caracters = this.caractersService.getAllCaracters();
-        this.caracters$ = this.caractersService.getAllCaracters();
-        console.log(this.caracters$);
+        // this.caracters$ = this.caractersService.getAllCaracters();
+        // console.log(this.caracters$);
         
         // this.caracter = this.caractersService.getSingleCaracters(3);
     }

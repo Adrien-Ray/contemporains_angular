@@ -1,6 +1,6 @@
 <mat-form-field class="example-full-width">
     <mat-label>entrer un nom</mat-label>
-    <input matInput placeholder="Ex. Albert" [(ngModel)]="inputValue" (ngModelChange)="onValueChange($event)">
+    <input matInput placeholder="Ex. Albert" [(ngModel)]="inputValue" (keydown.enter)="onValueChange(inputValue)">
 </mat-form-field>
 
 <div class="appCaractersCardsList">

@@ -6,7 +6,7 @@
     <mat-datepicker #picker></mat-datepicker>
   </mat-form-field> -->
   <mat-form-field>
-    <input matInput type="number" placeholder="Saisissez une année" min="-50000" max="2100" [(ngModel)]="inputValue" (ngModelChange)="onValueChange($event)">
+    <input matInput type="number" placeholder="Saisissez une année" min="-50000" max="2100" [(ngModel)]="inputValue" (keydown.enter)="onValueChange(inputValue)">
   </mat-form-field>
   <div class="appCaractersCardsList">
     <app-caracters-cards *ngFor="let caracter of caracters$ | async" [caracter]="caracter"></app-caracters-cards>
