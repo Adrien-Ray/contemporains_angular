@@ -8,4 +8,10 @@
         <div>{{caracter.attributes.year_born}}</div>
         <div>{{caracter.attributes.year_die}}</div>
     </div>
+    <div class="type">
+        <app-caracters-card-type *ngFor="let caracterType of caracter.attributes.caracters_types.data" [caracterType]="caracterType"></app-caracters-card-type>
+    </div>
+    <div class="relation">
+        <app-caracters-card-relations *ngFor="let caracterRelation of caracter.attributes.relations.data" [caracterRelation]="caracterRelation"></app-caracters-card-relations>
+    </div>
 </div>

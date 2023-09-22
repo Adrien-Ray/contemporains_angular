@@ -27,4 +27,17 @@
             margin: 5px 8px 0 5px;
         }
     }
+    .type, .relation {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        overflow-y: auto;
+    }
+    .type {
+        height: 6em;
+    }
+    .relation {
+        height: 10em;
+    }
 }

@@ -19,6 +19,8 @@ import { SearchByDateComponent } from './components/search-by-date/search-by-dat
 import { SearchByNameComponent } from './components/search-by-name/search-by-name.component';
 import { CaractersCardsComponent } from './components/caracters-cards/caracters-cards.component';
 import { HttpClientModule } from '@angular/common/http';
+import { CaractersCardTypeComponent } from './components/caracters-card-type/caracters-card-type.component';
+import { CaractersCardRelationsComponent } from './components/caracters-card-relations/caracters-card-relations.component';
 
 @NgModule({
     declarations: [
@@ -26,6 +28,8 @@ import { HttpClientModule } from '@angular/common/http';
         SearchByDateComponent,
         SearchByNameComponent,
         CaractersCardsComponent,
+        CaractersCardTypeComponent,
+        CaractersCardRelationsComponent,
     ],
     imports: [
         RouterModule,

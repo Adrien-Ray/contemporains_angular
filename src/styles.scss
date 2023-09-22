@@ -31,6 +31,15 @@ body {
             border: 2px dashed red;
             display: none;
         }
+        @media (max-width: 1199px) {
+            max-width: 919px;
+        }
+        @media (max-width: 918px) {
+            max-width: 638px;
+        }
+        @media (max-width: 637px) {
+            max-width: 357px;
+        }
     }
     a {
         color: var(--mat-toolbar-container-text-color);
