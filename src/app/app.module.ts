@@ -21,6 +21,7 @@ import { CaractersCardsComponent } from './components/caracters-cards/caracters-
 import { HttpClientModule } from '@angular/common/http';
 import { CaractersCardTypeComponent } from './components/caracters-card-type/caracters-card-type.component';
 import { CaractersCardRelationsComponent } from './components/caracters-card-relations/caracters-card-relations.component';
+import { SinglePageComponent } from './components/single-page/single-page.component';
 
 @NgModule({
     declarations: [
@@ -30,6 +31,7 @@ import { CaractersCardRelationsComponent } from './components/caracters-card-rel
         CaractersCardsComponent,
         CaractersCardTypeComponent,
         CaractersCardRelationsComponent,
+        SinglePageComponent,
     ],
     imports: [
         RouterModule,

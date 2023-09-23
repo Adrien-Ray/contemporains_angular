@@ -1,0 +1,12 @@
+<p>test {{( caracter$ | async)?.id}}</p>
+<h2>{{( caracter$ | async)!.attributes.name}}</h2>
+<figure>
+    <img src="{{( caracter$ | async)!.attributes.portrait}}" alt="">
+    <figcaption>{{( caracter$ | async)!.attributes.year_born}} - {{( caracter$ | async)!.attributes.year_die}}<br>{{( caracter$ | async)!.attributes.born}} - {{( caracter$ | async)!.attributes.die}}</figcaption>
+</figure>
+<div class="desc" [innerHTML]="( caracter$ | async)!.attributes.desc">
+</div>
+<div class="links">
+    <a href="{{( caracter$ | async)!.attributes.portrait}}" target="_blank" rel="noopener noreferrer">lien vers l'image</a><br>
+    <a href="{{( caracter$ | async)!.attributes.wikipedia}}" target="_blank" rel="noopener noreferrer">lien vers l'article</a>
+</div>

@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { SearchByDateComponent } from './components/search-by-date/search-by-date.component';
 import { SearchByNameComponent } from './components/search-by-name/search-by-name.component';
+import { SinglePageComponent } from './components/single-page/single-page.component';
 
 const routes: Routes = [
     /* {
@@ -17,6 +18,10 @@ const routes: Routes = [
     {
         path: 'recherche/nom',
         component: SearchByNameComponent,
+    },
+    {
+        path: 'caracter/:id',
+        component: SinglePageComponent,
     },
     {
         // tous ce qui n'est pas répertorié (all, after)

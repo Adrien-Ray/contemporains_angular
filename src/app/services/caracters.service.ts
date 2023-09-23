@@ -44,6 +44,14 @@ export class CaractersService {
                 map(response => response.data),
             );
     }
-}
 
-// http://localhost:1337/api/characters?filters[name][$contains]=al
+    getByIdCaracters(id: string | null): Observable<Caracter> {
+        console.log('in service caracters.getByIdCaracters', id, `${environment.apiEndPoint}/characters/${id}?populate=*`);
+        
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        return this.http.get<any>(`${environment.apiEndPoint}/characters/${id}?populate=*`, this.httpOptions)
+            .pipe(
+                map(response => response.data),
+            );
+    }
+}

@@ -1,8 +1,8 @@
 <!-- <div>
     test {{caracter.attributes.name}}
 </div> -->
-<div class="caractersCardsComponent">
-    <div class="portrait" style="background-image: url({{caracter.attributes.portrait}});" title="credit: wikipedia&#10;{{caracter.attributes.portrait}}"></div>
+<div class="caractersCardsComponent" routerLink="/caracter/{{caracter.id}}" title="voir la fiche">
+    <div class="portrait" style="background-image: url({{caracter.attributes.portrait}});"></div>
     <div class="name">{{caracter.attributes.name}}</div>
     <div class="years">
         <div>{{caracter.attributes.year_born}}</div>
