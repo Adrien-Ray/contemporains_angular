@@ -1,0 +1,30 @@
+.card {
+    display: flex;
+    flex-direction: column;
+    width: 269px;
+    padding: 10px;
+    cursor: pointer;
+    box-shadow: 0 0 0px 0px rgba(255, 255, 255, 0.5);
+    transition: all ease-in-out .2s;
+    &:hover, &:focus {
+        box-shadow: 0 0 5px 5px rgba(255, 255, 255, 0.5);
+    }
+    .portrait {
+        margin-bottom: 10px;
+        aspect-ratio: 1/1;
+        background-position: center 30%;
+        background-size: cover;
+    }
+    .name {
+        font-weight: bolder;
+        font-size: 1.2em;
+        text-align: center;
+    }
+    .years {
+        display: flex;
+        justify-content: center;
+        >div {
+            margin: 5px 8px 0 5px;
+        }
+    }
+}
