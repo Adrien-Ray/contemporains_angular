@@ -2,15 +2,6 @@ h2.title_name {
     font-size: calc(2em + 2vw);
     margin: 1em 0;
 }
-@media (min-width: 1200px) {
-    .toflex {
-        display: flex;
-        figure {
-            width: calc(300px + 3rem);
-            margin-right: 3em;
-        }
-    }
-}
 figure {
     margin: 0 auto 5em 0;
     width: 300px;
@@ -23,6 +14,21 @@ figure {
         text-align: center;
         font-weight: bold;
         margin: 1em 0;
+    }
+}
+.desc {
+    line-height: 170%;
+}
+@media (min-width: 1200px) {
+    .toflex {
+        display: flex;
+        figure {
+            width: calc(300px + 3rem);
+            margin-right: 3em;
+        }
+        .desc {
+            max-width: calc(100% - (3rem + 300px));
+        }
     }
 }
 .links{
