@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, ParamMap } from '@angular/router';
+import { ActivatedRoute, ParamMap, Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import { Caracter } from 'src/app/models/caracter.model';
 // import { CaracterRelation } from 'src/app/models/caracterRelation';
@@ -16,6 +16,7 @@ export class SinglePageComponent implements OnInit {
     caracter$! : Observable<Caracter>;
     constructor(
         private route: ActivatedRoute,
+        private router: Router,
         private caractersService: CaractersService,
     ) {}
     ngOnInit(): void {

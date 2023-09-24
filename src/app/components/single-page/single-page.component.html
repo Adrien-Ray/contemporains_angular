@@ -1,12 +1,24 @@
-<p>test {{( caracter$ | async)?.id}}</p>
-<h2>{{( caracter$ | async)!.attributes.name}}</h2>
-<figure>
-    <img src="{{( caracter$ | async)!.attributes.portrait}}" alt="">
-    <figcaption>{{( caracter$ | async)!.attributes.year_born}} - {{( caracter$ | async)!.attributes.year_die}}<br>{{( caracter$ | async)!.attributes.born}} - {{( caracter$ | async)!.attributes.die}}</figcaption>
-</figure>
-<div class="desc" [innerHTML]="( caracter$ | async)!.attributes.desc">
-</div>
-<div class="links">
-    <a href="{{( caracter$ | async)!.attributes.portrait}}" target="_blank" rel="noopener noreferrer">lien vers l'image</a><br>
-    <a href="{{( caracter$ | async)!.attributes.wikipedia}}" target="_blank" rel="noopener noreferrer">lien vers l'article</a>
-</div>
+
+<ng-container *ngIf="(caracter$ | async) as caracterData">
+    <p>test {{caracterData.id}}</p>
+    <h2>{{caracterData.attributes.name}}</h2>
+    <figure>
+        <img src="{{caracterData.attributes.portrait}}" alt="">
+        <figcaption>{{caracterData.attributes.year_born}} - {{caracterData.attributes.year_die}}<br>{{caracterData.attributes.born}} - {{caracterData.attributes.die}}</figcaption>
+    </figure>
+    <div class="desc" [innerHTML]="caracterData.attributes.desc">
+    </div>
+    <div class="links">
+        <a href="{{caracterData.attributes.portrait}}" target="_blank" rel="noopener noreferrer">lien vers l'image</a><br>
+        <a href="{{caracterData.attributes.wikipedia}}" target="_blank" rel="noopener noreferrer">lien vers l'article</a>
+    </div>
+    <div class="type">
+        <app-caracters-card-type *ngFor="let caracterType of caracterData.attributes.caracters_types.data" [caracterType]="caracterType"></app-caracters-card-type>
+    </div>
+    <!-- <div class="relation">
+        <app-caracters-card-relations *ngFor="let caracterRelation of ( caracter$ | async)!.attributes.relations.data" [caracterRelation]="caracterRelation"></app-caracters-card-relations>
+    </div> -->
+    <div class="relationExtend">
+        <app-caracters-card-relation-extend *ngFor="let caracterRelation of caracterData.attributes.relations.data" [caracterRelation]="caracterRelation"></app-caracters-card-relation-extend>
+    </div>
+</ng-container>

@@ -1,1 +1,4 @@
-<div class="card"><mat-icon>person</mat-icon><span>{{caracterRelation.attributes.name}}</span></div>
+<div class="card" [routerLink]="'/caracter/' + caracterRelation.id">
+    <mat-icon>person</mat-icon>
+    <span>{{caracterRelation.attributes.name}}</span>
+</div>

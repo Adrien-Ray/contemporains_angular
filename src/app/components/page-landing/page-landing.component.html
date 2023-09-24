@@ -1,0 +1,3 @@
+<ng-container *ngIf="(settings$ | async) as settings">
+    <div [innerHTML]="settings.attributes.content_landing"></div>
+</ng-container>

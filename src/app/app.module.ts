@@ -22,6 +22,10 @@ import { HttpClientModule } from '@angular/common/http';
 import { CaractersCardTypeComponent } from './components/caracters-card-type/caracters-card-type.component';
 import { CaractersCardRelationsComponent } from './components/caracters-card-relations/caracters-card-relations.component';
 import { SinglePageComponent } from './components/single-page/single-page.component';
+import { CaractersCardRelationExtendComponent } from './components/caracters-card-relation-extend/caracters-card-relation-extend.component';
+import { HashLocationStrategy, LocationStrategy } from '@angular/common';
+import { SinglePageChangeComponent } from './components/single-page-change/single-page-change.component';
+import { PageLandingComponent } from './components/page-landing/page-landing.component';
 
 @NgModule({
     declarations: [
@@ -32,6 +36,9 @@ import { SinglePageComponent } from './components/single-page/single-page.compon
         CaractersCardTypeComponent,
         CaractersCardRelationsComponent,
         SinglePageComponent,
+        CaractersCardRelationExtendComponent,
+        SinglePageChangeComponent,
+        PageLandingComponent,
     ],
     imports: [
         RouterModule,
@@ -49,7 +56,7 @@ import { SinglePageComponent } from './components/single-page/single-page.compon
         HttpClientModule,
         FormsModule,
     ],
-    providers: [],
+    providers: [{ provide: LocationStrategy, useClass: HashLocationStrategy }],
     bootstrap: [AppComponent],
 })
 export class AppModule { }

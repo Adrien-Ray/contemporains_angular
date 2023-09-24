@@ -1,0 +1,11 @@
+<div class="card" routerLink="/caracter-change/{{caracterRelation.id}}">
+    <figure>
+        <img src="{{caracterRelation.attributes.portrait}}" alt="portrait de {{caracterRelation.attributes.name}}">
+    </figure>
+    <h3>{{caracterRelation.attributes.name}}</h3>
+    <div>
+        <span>{{caracterRelation.attributes.year_born}}</span>
+        <span> - </span>
+        <span>{{caracterRelation.attributes.year_die}} </span>
+    </div>
+</div>
