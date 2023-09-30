@@ -19,7 +19,12 @@
     <!-- <div class="relation">
         <app-caracters-card-relations *ngFor="let caracterRelation of ( caracter$ | async)!.attributes.relations.data" [caracterRelation]="caracterRelation"></app-caracters-card-relations>
     </div> -->
+    <h2>relations connus</h2>
     <div class="relationExtend appCaractersCardsList">
         <app-caracters-card-relation-extend *ngFor="let caracterRelation of caracterData.attributes.relations.data" [caracterRelation]="caracterRelation"></app-caracters-card-relation-extend>
+    </div>
+    <div class="searchPathRealation">
+        <h2>rechercher le lien avec une autre personne</h2>
+        <app-search-by-name-path></app-search-by-name-path>
     </div>
 </ng-container>

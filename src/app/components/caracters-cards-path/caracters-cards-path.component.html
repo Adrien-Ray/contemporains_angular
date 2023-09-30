@@ -1,0 +1,14 @@
+<div class="caractersCardsComponent" routerLink="/caracter/{{caracter.id}}" title="voir la fiche">
+    <div class="portrait" style="background-image: url({{caracter.attributes.portrait}});"></div>
+    <div class="name">{{caracter.attributes.name}}</div>
+    <div class="years">
+        <div>{{caracter.attributes.year_born}}</div>
+        <div>{{(caracter.attributes.year_die != 9999)? caracter.attributes.year_die : 'alive'}}</div>
+    </div>
+    <div class="type">
+        <app-caracters-card-type *ngFor="let caracterType of caracter.attributes.caracters_types.data" [caracterType]="caracterType"></app-caracters-card-type>
+    </div>
+    <div class="relation">
+        <app-caracters-card-relations *ngFor="let caracterRelation of caracter.attributes.relations.data" [caracterRelation]="caracterRelation"></app-caracters-card-relations>
+    </div>
+</div>

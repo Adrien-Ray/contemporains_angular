@@ -27,6 +27,8 @@ import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 import { SinglePageChangeComponent } from './components/single-page-change/single-page-change.component';
 import { PageLandingComponent } from './components/page-landing/page-landing.component';
 import { Page404Component } from './components/page404/page404.component';
+import { SearchByNamePathComponent } from './components/search-by-name-path/search-by-name-path.component';
+import { CaractersCardsPathComponent } from './components/caracters-cards-path/caracters-cards-path.component';
 
 @NgModule({
     declarations: [
@@ -41,6 +43,8 @@ import { Page404Component } from './components/page404/page404.component';
         SinglePageChangeComponent,
         PageLandingComponent,
         Page404Component,
+        SearchByNamePathComponent,
+        CaractersCardsPathComponent,
     ],
     imports: [
         RouterModule,
