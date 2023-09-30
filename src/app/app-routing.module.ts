@@ -6,6 +6,7 @@ import { SearchByNameComponent } from './components/search-by-name/search-by-nam
 import { SinglePageComponent } from './components/single-page/single-page.component';
 import { SinglePageChangeComponent } from "./components/single-page-change/single-page-change.component";
 import { PageLandingComponent } from "./components/page-landing/page-landing.component";
+import { Page404Component } from "./components/page404/page404.component";
 
 const routes: Routes = [
     /* {
@@ -36,7 +37,8 @@ const routes: Routes = [
     {
         // tous ce qui n'est pas répertorié (all, after)
         path: '**',
-        redirectTo: '',
+        /* redirectTo: '', */
+        component: Page404Component,
     },
 ];
 
