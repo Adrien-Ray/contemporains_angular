@@ -6,7 +6,7 @@
     <div class="name">{{caracter.attributes.name}}</div>
     <div class="years">
         <div>{{caracter.attributes.year_born}}</div>
-        <div>{{caracter.attributes.year_die}}</div>
+        <div>{{(caracter.attributes.year_die != 9999)? caracter.attributes.year_die : 'alive'}}</div>
     </div>
     <div class="type">
         <app-caracters-card-type *ngFor="let caracterType of caracter.attributes.caracters_types.data" [caracterType]="caracterType"></app-caracters-card-type>

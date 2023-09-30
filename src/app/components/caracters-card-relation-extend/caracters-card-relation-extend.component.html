@@ -3,6 +3,6 @@
     <div class="name">{{caracterRelation.attributes.name}}</div>
     <div class="years">
         <div>{{caracterRelation.attributes.year_born}}</div>
-        <div>{{caracterRelation.attributes.year_die}}</div>
+        <div>{{(caracterRelation.attributes.year_die != 9999)? caracterRelation.attributes.year_die : 'alive'}}</div>
     </div>
 </div>

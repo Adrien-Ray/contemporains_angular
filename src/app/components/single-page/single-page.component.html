@@ -4,7 +4,7 @@
     <div class="toflex">
         <figure>
             <img src="{{caracterData.attributes.portrait}}" alt="">
-            <figcaption>{{caracterData.attributes.year_born}} - {{caracterData.attributes.year_die}}<br>{{caracterData.attributes.born}} - {{caracterData.attributes.die}}</figcaption>
+            <figcaption>{{caracterData.attributes.year_born}} - {{(caracterData.attributes.year_die != 9999)? caracterData.attributes.year_die : 'alive'}}<br>{{caracterData.attributes.born}} - {{(caracterData.attributes.year_die != 9999)? caracterData.attributes.die : 'alive'}}</figcaption>
         </figure>
         <div class="desc" [innerHTML]="caracterData.attributes.desc">
     </div>

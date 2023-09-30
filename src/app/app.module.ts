@@ -26,6 +26,7 @@ import { CaractersCardRelationExtendComponent } from './components/caracters-car
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 import { SinglePageChangeComponent } from './components/single-page-change/single-page-change.component';
 import { PageLandingComponent } from './components/page-landing/page-landing.component';
+import { Page404Component } from './components/page404/page404.component';
 
 @NgModule({
     declarations: [
@@ -39,6 +40,7 @@ import { PageLandingComponent } from './components/page-landing/page-landing.com
         CaractersCardRelationExtendComponent,
         SinglePageChangeComponent,
         PageLandingComponent,
+        Page404Component,
     ],
     imports: [
         RouterModule,
