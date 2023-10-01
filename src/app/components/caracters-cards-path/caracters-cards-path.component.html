@@ -1,4 +1,5 @@
-<div class="caractersCardsComponent" routerLink="/caracter/{{caracter.id}}" title="voir la fiche">
+<!-- <div class="caractersCardsComponent" routerLink="/caracter-change/{{caracter.id}}" title="voir la fiche"> -->
+<div class="caractersCardsComponent" title="voir la fiche" (click)="onCardClick(caracter.id)">
     <div class="portrait" style="background-image: url({{caracter.attributes.portrait}});"></div>
     <div class="name">{{caracter.attributes.name}}</div>
     <div class="years">

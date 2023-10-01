@@ -3,7 +3,7 @@
     <input matInput placeholder="Ex. Albert" [(ngModel)]="inputValue" (keydown.enter)="onValueChange(inputValue)">
 </mat-form-field>
 
-<div class="appCaractersCardsList">
-    <app-caracters-cards-path *ngFor="let caracter of caracters$ | async" [caracter]="caracter"></app-caracters-cards-path>
+<div class="appCaractersCardsList" *ngIf="seeList === true">
+    <app-caracters-cards-path *ngFor="let caracter of caracters$ | async" [caracter]="caracter" (idClickedToPath)="onIdClickedToPath($event)"></app-caracters-cards-path>
 </div>
 <!-- <app-caracters-cards [caracter]="caracter"></app-caracters-cards> -->

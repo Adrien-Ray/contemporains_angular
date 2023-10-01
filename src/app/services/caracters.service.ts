@@ -56,4 +56,9 @@ export class CaractersService {
                 map(response => response.data),
             );
     }
+
+    getPathIntoTwoCaracters(idFrom: number | null, idTo: number | null): string {
+        console.log(idFrom, idTo);
+        return 'azerty path';
+    }
 }

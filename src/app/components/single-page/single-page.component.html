@@ -25,6 +25,7 @@
     </div>
     <div class="searchPathRealation">
         <h2>rechercher le lien avec une autre personne</h2>
-        <app-search-by-name-path></app-search-by-name-path>
+        <app-search-by-name-path (idClickedToPath)="onIdClickedToPath($event)"></app-search-by-name-path>
     </div>
+    <h1>{{idToPath}}</h1>
 </ng-container>

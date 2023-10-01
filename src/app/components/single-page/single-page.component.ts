@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { ActivatedRoute, ParamMap, Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import { Caracter } from 'src/app/models/caracter.model';
@@ -13,12 +13,28 @@ import { CaractersService } from 'src/app/services/caracters.service';
 
 export class SinglePageComponent implements OnInit {
     id! : string | null;
+    idNumber! : number | null;
+    idToPath! : number | null;
     caracter$! : Observable<Caracter>;
     constructor(
         private route: ActivatedRoute,
         private router: Router,
         private caractersService: CaractersService,
     ) {}
+
+    @Output() idClickedToPath = new EventEmitter<number>();
+    onIdClickedToPath(id: number) {
+        // Traitez l'ID reçu ici
+        /* console.log('ID cliqué vu dans single :', id);
+        console.log('typeof id', typeof this.id); */
+        
+        if (typeof this.id === 'string') {
+            this.idNumber = parseInt(this.id);
+        }
+        this.idToPath = id;
+        this.caractersService.getPathIntoTwoCaracters(this.idNumber, this.idToPath);
+    }
+
     ngOnInit(): void {
         this.route.paramMap.subscribe((params: ParamMap) => {
             this.id = params.get('id');
