@@ -18,14 +18,14 @@ export class SearchByNamePathComponent implements OnInit, OnDestroy{
     @Output() idClickedToPath = new EventEmitter<number>();
     onIdClickedToPath(id: number) {
         // Traitez l'ID reçu ici
-        console.log('ID cliqué vu dans parent :', id);
+        // console.log('ID cliqué vu dans parent :', id);
         this.idClickedToPath.emit(id);
         this.seeList = false;
     }
 
     onValueChange(newValue: string) {
         this.seeList = true;
-        console.log('Nouvelle valeur : ', newValue);
+        // console.log('Nouvelle valeur : ', newValue);
         // Vous pouvez effectuer d'autres actions ici avec la nouvelle valeur
         this.caracters$ = this.caractersService.getByNameCaracters(newValue);
     }

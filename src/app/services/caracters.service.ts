@@ -13,7 +13,7 @@ export class CaractersService {
 
     httpOptions = {
         headers : {
-            Authorization: "bearer 2c17e76bc670e2439f9b9048e6ac422ddaec965e9f19ad77ab40d43027105d6acb165b2a51ef3d47bc6cf4cef494c04fbc3c9ec92f9699cc812a429c92b9345ca4eb56cf857fca1333f6bba9822295d19cf6a43dcbb640cb93b36ebf4e6218caf50c24796d937a839e36215ecf9370ba4e686d1b97d9e8fac6bd399cac1335ab",
+            Authorization: `bearer ${environment.apiTocken}`,
             'Content-Type': 'application/json',
         },
     };
@@ -57,8 +57,21 @@ export class CaractersService {
             );
     }
 
-    getPathIntoTwoCaracters(idFrom: number | null, idTo: number | null): string {
+    /* getPathIntoTwoCaracters(idFrom: number | null, idTo: number | null): Observable<string> {
         console.log(idFrom, idTo);
-        return 'azerty path';
-    }
+        const idFromString = `${idFrom}`;
+        // get id from and list his relations
+        // check if idTo is in relations
+        // if no, iter relations of relations and check if idTo is in
+        // if no, iter rel of rel of rel and check if idTo is in
+        return this.getByIdCaracters(idFromString).pipe(
+            map((caracter) => {
+                // console.log(caracter);
+                const filToReturn: string = `${caracter.id}-${caracter.attributes.name}`;
+                console.log('filToReturn', filToReturn);
+                return filToReturn;
+            }),
+        );
+    } */
 }
+
