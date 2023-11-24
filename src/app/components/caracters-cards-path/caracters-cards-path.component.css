@@ -1,0 +1,43 @@
+.caractersCardsComponent {
+  display: flex;
+  flex-direction: column;
+  width: 269px;
+  padding: 10px;
+  cursor: pointer;
+  box-shadow: 0 0 0px 0px rgba(255, 255, 255, 0.5);
+  transition: all ease-in-out 0.2s;
+}
+.caractersCardsComponent:hover, .caractersCardsComponent:focus {
+  box-shadow: 0 0 5px 5px rgba(255, 255, 255, 0.5);
+}
+.caractersCardsComponent .portrait {
+  margin-bottom: 10px;
+  aspect-ratio: 1/1;
+  background-position: center 30%;
+  background-size: cover;
+}
+.caractersCardsComponent .name {
+  font-weight: bolder;
+  font-size: 1.2em;
+  text-align: center;
+}
+.caractersCardsComponent .years {
+  display: flex;
+  justify-content: center;
+}
+.caractersCardsComponent .years > div {
+  margin: 5px 8px 0 5px;
+}
+.caractersCardsComponent .type, .caractersCardsComponent .relation {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  overflow-y: auto;
+}
+.caractersCardsComponent .type {
+  height: 6em;
+}
+.caractersCardsComponent .relation {
+  height: 10em;
+}/*# sourceMappingURL=caracters-cards-path.component.css.map */

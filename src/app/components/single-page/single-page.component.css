@@ -1,0 +1,71 @@
+h2.title_name {
+  font-size: calc(2em + 2vw);
+  margin: 1em 0;
+}
+
+figure {
+  margin: 0 auto 5em 0;
+  width: 300px;
+  max-width: 100%;
+}
+figure img {
+  width: 100%;
+  max-width: 100%;
+}
+figure figcaption {
+  text-align: center;
+  font-weight: bold;
+  margin: 1em 0;
+}
+
+.desc {
+  line-height: 170%;
+}
+
+@media (min-width: 1200px) {
+  .toflex {
+    display: flex;
+  }
+  .toflex figure {
+    width: calc(300px + 3rem);
+    margin-right: 3em;
+  }
+  .toflex .desc {
+    max-width: calc(100% - (3rem + 300px));
+  }
+}
+.links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 5em 0;
+}
+.links a {
+  display: flex;
+  align-items: center;
+  /* background-color: rgba(255,255,255,0.1);
+  cursor: pointer;
+  border-radius: 5px;
+  border: 2px solid rgba(255,255,255,0.3); */
+  border-width: 3px;
+  padding: 5px 10px;
+  margin: 5px;
+}
+
+.type {
+  font-size: 2em;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 5rem;
+}
+
+.relationExtend {
+  display: flex;
+  flex-wrap: wrap;
+  border: 1px solid grey;
+  padding: 5px;
+}
+
+h2 {
+  margin: 5em 0 2em 0;
+}/*# sourceMappingURL=single-page.component.css.map */

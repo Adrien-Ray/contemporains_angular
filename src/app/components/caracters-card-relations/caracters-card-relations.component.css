@@ -1,0 +1,20 @@
+.card {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 4px;
+  margin: 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card > * {
+  display: block;
+}
+.card > mat-icon {
+  font-size: 1em;
+  width: auto;
+  height: auto;
+  margin-right: 5px;
+}
+.card > span {
+  font-size: 0.9em;
+}/*# sourceMappingURL=caracters-card-relations.component.css.map */
